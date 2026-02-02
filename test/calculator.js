@@ -1,15 +1,15 @@
 const { expect } = require("chai");
 const { add, sub, mul, div } = require("../calculator");
 
-// helper to print your own messages
+
 function check(testName, actualFn, expected) {
   const actual = actualFn();
   try {
     expect(actual).to.equal(expected);
-    console.log(`✅ PASS: ${testName} | expected ${expected}, got ${actual}`);
+    console.log(` PASS: ${testName} | expected ${expected}, got ${actual}`);
   } catch (err) {
-    console.log(`❌ FAIL: ${testName} | expected ${expected}, got ${actual}`);
-    throw err; // keep mocha showing the fail in summary
+    console.log(`FAIL: ${testName} | expected ${expected}, got ${actual}`);
+    throw err; // mocha showing the fail in summary
   }
 }
 
